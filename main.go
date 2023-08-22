@@ -14,7 +14,8 @@ func main() {
 	})
 
 	app.Get("/getObjectUrl",api.GetObjectUrlApi)
-
+	app.Post("/createS3Bucket",api.CreateBucketApi)
+	app.Post("/createObject",api.CreateObjectApi)
 	if err := app.Listen(":4000"); err != nil {
 		log.Fatalf("failed to run server: %v", err)
 	}
